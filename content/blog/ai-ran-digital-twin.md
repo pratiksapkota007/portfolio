@@ -30,6 +30,4 @@ Real RAN deployments are expensive to experiment on. A twin lets you test beamfo
 - Add more realistic channel models
 - Publish detailed benchmarks
 
----
 
-*Edit this file at `content/blog/ai-ran-digital-twin.md` — save, commit, push, and your live site updates.*
