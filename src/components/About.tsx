@@ -8,8 +8,8 @@ export default function About() {
       <RevealOnScroll>
         <SectionHeading
           label="01 — About"
-          title="Signals, systems, and intelligence"
-          subtitle="From live RAN deployments to ML research — I work where hardware meets code."
+          title="Pratik Sapkota"
+          subtitle="From live RAN deployments to ML research enthusiast."
         />
       </RevealOnScroll>
 
