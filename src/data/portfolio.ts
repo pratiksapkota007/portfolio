@@ -22,7 +22,7 @@ export const site = {
   profileImage: "/images/profile.jpg",
 
   /** Hero status badge (shown under navbar area) */
-  heroBadge: "Open to opportunities · collaboration · hiring",
+  heroBadge: "Open to opportunities ",
 
   // Add your real URLs here when ready
   social: {
