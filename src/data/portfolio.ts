@@ -121,6 +121,7 @@ export const projects = [
       "ResNet18 classifier for four cardiac conditions with morphological ECG signal processing pipeline.",
     tags: ["Python", "PyTorch", "Signal Processing"],
     github: "https://github.com/pratiksapkota007/ECG-for-Mycardial-Infraction",
+    google_scholar: "https://arxiv.org/abs/2412.05583",
     featured: false,
   },
   {
