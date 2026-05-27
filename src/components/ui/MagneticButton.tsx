@@ -8,6 +8,8 @@ interface MagneticButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "ghost";
   download?: boolean;
+  /** Open link in a new browser tab */
+  newTab?: boolean;
 }
 
 /**
@@ -19,6 +21,7 @@ export default function MagneticButton({
   children,
   variant = "primary",
   download,
+  newTab,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLAnchorElement>(null);
 
@@ -48,8 +51,8 @@ export default function MagneticButton({
       ref={ref}
       href={href}
       download={download}
-      target={href.startsWith("http") ? "_blank" : undefined}
-      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      target={newTab || href.startsWith("http") ? "_blank" : undefined}
+      rel={newTab || href.startsWith("http") ? "noopener noreferrer" : undefined}
       className={`${base} ${styles}`}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}

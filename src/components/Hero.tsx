@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown, Download, FileText } from "lucide-react";
 import { site } from "@/data/portfolio";
 import MagneticButton from "@/components/ui/MagneticButton";
 import ProfilePhoto from "@/components/ProfilePhoto";
@@ -49,12 +49,15 @@ export default function Hero() {
               {site.tagline}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <MagneticButton href="#projects">View Projects</MagneticButton>
-              <MagneticButton href={site.resumePath} variant="ghost" download>
-                <Download size={18} /> Resume
-              </MagneticButton>
-            </div>
+          <div className="flex flex-wrap gap-4">
+            <MagneticButton href="#projects">View Projects</MagneticButton>
+            <MagneticButton href={site.resumePage} variant="ghost" newTab>
+              <FileText size={18} /> View CV
+            </MagneticButton>
+            <MagneticButton href={site.resumePath} variant="ghost" download>
+              <Download size={18} /> Download
+            </MagneticButton>
+          </div>
           </div>
 
           {/* Desktop — photo beside name */}

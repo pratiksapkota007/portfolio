@@ -17,6 +17,8 @@ export const site = {
   email: "pratiksapkota98@gmail.com",
   phone: "+977-9861015458",
   resumePath: "/resume/Pratik_Sapkota_CV.pdf",
+  /** Page that opens CV in the browser — share this link: yoursite.com/resume */
+  resumePage: "/resume",
 
   /** Profile photo path (file must live in public/images/) */
   profileImage: "/images/profile.jpg",

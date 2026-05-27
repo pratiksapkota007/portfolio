@@ -29,5 +29,3 @@ Real RAN deployments are expensive to experiment on. A twin lets you test beamfo
 - Compare federated vs centralized policy training
 - Add more realistic channel models
 - Publish detailed benchmarks
-
-

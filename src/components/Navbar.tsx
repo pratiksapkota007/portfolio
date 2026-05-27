@@ -40,11 +40,12 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href={site.resumePath}
-              download
+              href={site.resumePage}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm px-4 py-2 rounded-full border border-white/15 text-[var(--color-cream)] hover:bg-white/5 transition-colors"
             >
-              Resume
+              CV
             </a>
           </li>
         </ul>

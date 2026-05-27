@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Linkedin, Github, MapPin, Phone, Download } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, Phone, Download, FileText } from "lucide-react";
 import { site } from "@/data/portfolio";
 import SectionHeading from "@/components/ui/SectionHeading";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
@@ -54,14 +54,17 @@ export default function Contact() {
               Ready to build something?
             </h3>
             <p className="text-[var(--color-muted)] mb-8 max-w-sm">
-              Download my resume or drop me an email — I typically respond within 24 hours.
+              View my CV in the browser or download it — I typically respond within 24 hours.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <MagneticButton href={site.social.email}>
                 <Mail size={18} /> Email Me
               </MagneticButton>
+              <MagneticButton href={site.resumePage} variant="ghost" newTab>
+                <FileText size={18} /> View CV
+              </MagneticButton>
               <MagneticButton href={site.resumePath} variant="ghost" download>
-                <Download size={18} /> Resume
+                <Download size={18} /> Download
               </MagneticButton>
             </div>
           </div>
