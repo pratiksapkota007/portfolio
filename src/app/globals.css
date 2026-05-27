@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/*
+  MINIMAL THEME — black · white · beige
+  Change these variables to retheme the entire site.
+*/
+
+@theme {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Core palette */
+  --color-void: #0a0a0a;
+  --color-surface: #111111;
+  --color-panel: #1a1a1a;
+  --color-cream: #f5f0e8;
+  --color-beige: #e8dcc8;
+  --color-sand: #d4c4a8;
+  --color-stone: #9c958c;
+  --color-muted: #7a756e;
+
+  /* Semantic aliases (used across components) */
+  --color-electric: var(--color-beige);
+  --color-violet: var(--color-sand);
+  --color-accent: var(--color-cream);
+}
+
+:root {
+  --cursor-x: 50%;
+  --cursor-y: 50%;
+
+  /* Expose palette on :root so var() works in all components */
+  --color-void: #0a0a0a;
+  --color-surface: #111111;
+  --color-panel: #1a1a1a;
+  --color-cream: #f5f0e8;
+  --color-beige: #e8dcc8;
+  --color-sand: #d4c4a8;
+  --color-stone: #9c958c;
+  --color-muted: #7a756e;
+  --color-electric: var(--color-beige);
+  --color-violet: var(--color-sand);
+  --color-accent: var(--color-cream);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0a;
+  color: #f5f0e8;
+  font-family: var(--font-display);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-beige) 40%, transparent);
+  color: var(--color-cream);
+}
+
+/* Subtle warm gradient — barely there */
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 20%, rgba(232, 220, 200, 0.04), transparent),
+    radial-gradient(ellipse 50% 40% at 85% 75%, rgba(212, 196, 168, 0.03), transparent),
+    var(--color-void);
+}
+
+/* Very soft cursor highlight */
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    500px circle at var(--cursor-x) var(--cursor-y),
+    rgba(232, 220, 200, 0.03),
+    transparent 45%
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone);
+  border-radius: 3px;
+}
+
+/* Minimal text emphasis — no neon glow */
+.text-glow {
+  text-shadow: none;
+}
+
+/* Clean glass panel */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle card hover — no holographic sweep */
+.holo-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.holo-card::before {
+  display: none;
+}
+.holo-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 220, 200, 0.18);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.section-padding {
+  @apply px-6 py-24 md:px-12 lg:px-24 max-w-7xl mx-auto;
+}
