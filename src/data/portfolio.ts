@@ -210,21 +210,6 @@ export const research = [
 
 export const certifications = ["Nepal Engineering License — Nepal Engineering Council"];
 
-export const blogPosts = [
-  {
-    title: "Coming Soon: Notes from the RAN Field",
-    date: "2026",
-    excerpt: "Technical write-ups on wireless optimization, ns-3 simulations, and ML for networks.",
-    slug: "#",
-  },
-  {
-    title: "Building an AI-RAN Digital Twin in ns-3",
-    date: "Draft",
-    excerpt: "How topography-aware beamforming and PPO reinforcement learning come together.",
-    slug: "#",
-  },
-];
-
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
