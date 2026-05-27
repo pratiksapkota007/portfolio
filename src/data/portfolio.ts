@@ -18,6 +18,12 @@ export const site = {
   phone: "+977-9861015458",
   resumePath: "/resume/Pratik_Sapkota_CV.pdf",
 
+  /** Profile photo path (file must live in public/images/) */
+  profileImage: "/images/profile.jpg",
+
+  /** Hero status badge (shown under navbar area) */
+  heroBadge: "Open to opportunities · collaboration · hiring",
+
   // Add your real URLs here when ready
   social: {
     linkedin: "https://www.linkedin.com/in/pratik-sapkota-a994991a7",

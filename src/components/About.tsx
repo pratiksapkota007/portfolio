@@ -13,7 +13,7 @@ export default function About() {
         />
       </RevealOnScroll>
 
-      <div className="grid md:grid-cols-5 gap-12">
+      <div className="grid md:grid-cols-5 gap-12 items-start">
         <div className="md:col-span-3 space-y-6">
           {about.paragraphs.map((p, i) => (
             <RevealOnScroll key={i} delay={i * 0.1}>
@@ -22,15 +22,17 @@ export default function About() {
           ))}
         </div>
 
-        <div className="md:col-span-2 grid grid-cols-2 gap-4">
-          {about.highlights.map((h, i) => (
-            <RevealOnScroll key={h.label} delay={i * 0.1}>
-              <div className="glass rounded-2xl p-6 text-center holo-card">
-                <p className="text-3xl font-bold text-[var(--color-cream)]">{h.value}</p>
-                <p className="text-sm text-[var(--color-muted)] mt-2">{h.label}</p>
-              </div>
-            </RevealOnScroll>
-          ))}
+        <div className="md:col-span-2">
+          <div className="grid grid-cols-2 gap-4">
+            {about.highlights.map((h, i) => (
+              <RevealOnScroll key={h.label} delay={i * 0.1}>
+                <div className="glass rounded-2xl p-6 text-center holo-card">
+                  <p className="text-3xl font-bold text-[var(--color-cream)]">{h.value}</p>
+                  <p className="text-sm text-[var(--color-muted)] mt-2">{h.label}</p>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
         </div>
       </div>
     </section>

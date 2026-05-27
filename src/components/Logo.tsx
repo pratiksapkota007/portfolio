@@ -50,14 +50,16 @@ export default function Logo({
           </filter>
         </defs>
 
-        {/* Outer ring — like an antenna aperture */}
-        <circle
-          cx="20"
-          cy="20"
-          r="18"
+        {/* Outer frame — rounded square (minimal) */}
+        <rect
+          x="4"
+          y="4"
+          width="32"
+          height="32"
+          rx="8"
           stroke="url(#logo-gradient)"
           strokeWidth="1.2"
-          strokeOpacity="0.35"
+          strokeOpacity="0.4"
           fill="none"
         />
 

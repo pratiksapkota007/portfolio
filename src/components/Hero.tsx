@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
 import { site } from "@/data/portfolio";
 import MagneticButton from "@/components/ui/MagneticButton";
+import ProfilePhoto from "@/components/ProfilePhoto";
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -19,35 +20,47 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center section-padding pt-32">
-      <div className="relative z-10 max-w-4xl">
-        <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8">
-          <span className="w-2 h-2 rounded-full bg-[#d4c4a8] animate-pulse" />
-          <span className="text-sm font-mono text-[#9c958c]">
-            Available for opportunities · {site.location}
-          </span>
+    <section className="relative min-h-screen flex items-center section-padding pt-28 pb-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
+        {/* Mobile & tablet — photo at top of hero */}
+        <div className="flex justify-center mb-10 lg:hidden">
+          <ProfilePhoto variant="about" />
         </div>
 
-        <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold leading-[0.95] tracking-tight mb-6">
-          <span className="block text-[#f5f0e8]">Pratik</span>
-          <span className="block text-[#e8dcc8]">Sapkota</span>
-        </h1>
+        <div className="grid lg:grid-cols-[1fr_minmax(16rem,20rem)] xl:grid-cols-[1fr_22rem] gap-10 lg:gap-16 items-center">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#d4c4a8] animate-pulse" />
+              <span className="text-sm font-mono text-[#9c958c]">{site.heroBadge}</span>
+            </div>
 
-        <div className="h-10 mb-6">
-          <p className="text-xl md:text-2xl font-mono text-[#d4c4a8]">
-            {site.heroRoles[roleIndex]}
-          </p>
-        </div>
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold leading-[0.95] tracking-tight mb-6">
+              <span className="block text-[#f5f0e8]">Pratik</span>
+              <span className="block text-[#e8dcc8]">Sapkota</span>
+            </h1>
 
-        <p className="text-lg text-[#9c958c] max-w-xl mb-10 leading-relaxed">
-          {site.tagline}
-        </p>
+            <div className="h-10 mb-6">
+              <p className="text-xl md:text-2xl font-mono text-[#d4c4a8]">
+                {site.heroRoles[roleIndex]}
+              </p>
+            </div>
 
-        <div className="flex flex-wrap gap-4">
-          <MagneticButton href="#projects">View Projects</MagneticButton>
-          <MagneticButton href={site.resumePath} variant="ghost" download>
-            <Download size={18} /> Resume
-          </MagneticButton>
+            <p className="text-lg text-[#9c958c] max-w-xl mb-10 leading-relaxed">
+              {site.tagline}
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <MagneticButton href="#projects">View Projects</MagneticButton>
+              <MagneticButton href={site.resumePath} variant="ghost" download>
+                <Download size={18} /> Resume
+              </MagneticButton>
+            </div>
+          </div>
+
+          {/* Desktop — photo beside name */}
+          <div className="hidden lg:flex justify-end items-center w-full">
+            <ProfilePhoto variant="hero" />
+          </div>
         </div>
       </div>
 
