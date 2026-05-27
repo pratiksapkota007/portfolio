@@ -28,4 +28,4 @@ Transmission, core, and OSS coordination matters during incidents — especially
 
 ---
 
-*Edit this file at `content/blog/notes-from-ran-field.md`.*
+
